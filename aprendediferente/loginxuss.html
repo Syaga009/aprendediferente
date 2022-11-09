@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>Xuss</title>
+    <link rel="stylesheet" href="./css/inicialpepsico.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-formulario contenedor">
+        <div class="imagen-formulario">
+
+        </div>
+        <form name="login" class="formulario">
+            <div class="texto-formulario">
+                <img style="width: 60%;  margin-left: 20%; margin-top: 1%" src="assets/img/pepsico/Logocreasupervisores.png" alt="">
+                <p>Inicio de Sesión</p>
+            </div>
+            <div class="input">
+                <label for="domTextElement"> </label>
+                <input placeholder="Numero de celular" type="text" id="usuario" name="usuario">
+            </div>
+            <div class="input">
+                <label for="domTextElement"></label>
+                <div class="input-group">
+                    <input placeholder="Contraseña" type="password" id="Contraseña" name="contraseña">
+                    
+                    <div style="margin-top: 5%" class="input-group-append">
+                       
+                        <button align="center" id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()">
+                            <span class="fa fa-eye-slash icon"></span> Mostrar Contraseña</button>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br>
+            <div align="center" class="paginacion">
+                <a style="background-color: #04ADF8; color: white" onclick="getValueInput()"
+                    href="https://google.com">Ingresar</a>
+            </div>
+        </form>
+    </div>
+
+    <p id="valueInput"></p>
+
+    <script>
+        const getValueInput = () => {
+            let user = document.getElementById("usuario").value;
+            let pass = document.getElementById("Contraseña").value;
+
+            const url = 'https://adntraining.000webhostapp.com/validar.php?usuario=' + user + '&contrasena=' + pass;
+            console.log(url);
+            var theLinks = document.querySelectorAll('.paginacion a');
+
+            theLinks.forEach(function (element, index) {
+                element.href = url;
+            });
+            //window.open(url);
+        }
+        function mostrarPassword() {
+            var cambio = document.getElementById("Contraseña");
+            if (cambio.type == "password") {
+                cambio.type = "text";
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            } else {
+                cambio.type = "password";
+                $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        }
+
+        $(document).ready(function () {
+            //CheckBox mostrar contraseña
+            $('#ShowPassword').click(function () {
+                $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
+    </script>
+</body>
+
+</html>
