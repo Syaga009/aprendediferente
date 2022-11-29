@@ -1,0 +1,22 @@
+bdoy {
+    margin: 0;
+    padding: 0;
+}
+
+#imagen {
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    position: relative;
+}
+
+#video {
+    position: absolute;
+    top: 27.8%;
+    left: 17.8%;
+    width: 63%;
+    height: 240px;
+}
+
