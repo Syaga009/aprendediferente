@@ -1,9 +1,9 @@
-bdoy {
+body {
     margin: 0;
     padding: 0;
 }
 
-#imagen {
+/*#imagen {
     padding: 0;
     box-sizing: border-box;
     width: 100%;
@@ -19,4 +19,66 @@ bdoy {
     width: 63%;
     height: 240px;
 }
+*/
 
+@media only screen and (orientation:portrait) {
+    #video {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        position: absolute;
+        top: 33.1%;
+        left: 1%;
+        width: 100%;
+        height: 170px;
+    }
+
+    #imagen {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        padding: 0;
+        box-sizing: border-box;
+        margin-top: 50%;
+        margin-left: -100px;
+        width: 150%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+}
+
+@media only screen and (orientation:landscape) {
+    #video {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        position: absolute;
+        top: 21.1%;
+        left: 14%;
+        width: 50.8%;
+        height: 195px;
+    }
+
+    #imagen {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        padding: 0;
+        box-sizing: border-box;
+        width: 80%;
+        height: 0%;
+        overflow: hidden;
+        position: relative;
+    }
+}
