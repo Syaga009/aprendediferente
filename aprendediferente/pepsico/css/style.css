@@ -52,9 +52,40 @@ body {
 
     }
 
+    #pruebavideo{
+        
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        left: 14%;
+        right: 0;
+        top: 33%;
+        bottom: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: absolute;
+    }
+
 }
 
 @media only screen and (orientation:landscape) {
+    #pruebavideo{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        left: 29%;
+        right: 0;
+        top: 21%;
+        bottom: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: absolute;
+        width: 350px;
+    }
     #video {
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
