@@ -20,6 +20,18 @@
                 gyroscope; 
                 picture-in-picture" allowfullscreen>
     </iframe>
+    <script>
+        queryString = window.location.search;
+        user = queryString.replace('?correo=', '');
+        console.log(user);
+        const Http = new XMLHttpRequest();
+        const url = 'https://adncampeones.herokuapp.com/pepsico_filtro3.php?email='+ user +'&video3=1';
+        Http.open("GET", url);
+        Http.send();
+        Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+        }
+    </script>
 </body>
 
 </html>

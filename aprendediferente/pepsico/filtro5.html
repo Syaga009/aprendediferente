@@ -20,7 +20,18 @@
             <source src="https://aprendediferente2022.herokuapp.com/aprendediferente/pepsico/img/videos/LaEmociónDeLosResultados.mp4" type="video/mp4">
           </video>
     </div>
-   
+    <script>
+        queryString = window.location.search;
+        user = queryString.replace('?correo=', '');
+        console.log(user);
+        const Http = new XMLHttpRequest();
+        const url = 'https://adncampeones.herokuapp.com/pepsico_filtro5.php?email='+ user +'&video5=1';
+        Http.open("GET", url);
+        Http.send();
+        Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+        }
+    </script>
 </body>
 
 </html>
