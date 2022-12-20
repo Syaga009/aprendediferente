@@ -34,7 +34,7 @@
         user = queryString.replace('?correo=', '');
         console.log(user);
         const Http = new XMLHttpRequest();
-        const url = 'https://adncampeones.herokuapp.com/xuss_filtro1.php?email='+ user +'&video1=1';
+        const url = 'https://adncampeones.herokuapp.com/pepsico_filtro2.php?email='+ user +'&video2=1';
         Http.open("GET", url);
         Http.send();
         Http.onreadystatechange = (e) => {
