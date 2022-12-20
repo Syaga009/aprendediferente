@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    /* 1:1 Aspect Ratio */
+}
+
+.text {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+#imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
