@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <img id="imagen" src="img/parte.png" width="100%" height="auto">
-    <iframe id="video"  src="https://www.youtube-nocookie.com/embed/aE2DLaKtL-Y" title="YouTube video player"
-        frameborder="0" allow="accelerometer; 
-                autoplay; 
-                clipboard-write; 
-                encrypted-media; 
-                gyroscope; 
-                picture-in-picture" allowfullscreen>
-    </iframe>
+    <div class="container">
+        <div class="imagen">
+            <img id="imagen" src="img/parte.png" alt="">
+        </div>
+        <div class="text">
+            <video width="450" height="210" controls>
+                <source src="https://aprendediferente2022.herokuapp.com/aprendediferente/pepsico/img/videos/Progresodesdelodesconocido.mp4" type="video/mp4">
+
+            </video>
+        </div>
+    </div>
     <script>
         queryString = window.location.search;
         user = queryString.replace('?correo=', '');
